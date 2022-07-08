@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+////////////////////////////////////////////////////////////////////
+//                          _ooOoo_                               //
+//                         o8888888o                              //
+//                         88" . "88                              //
+//                         (| ^_^ |)                              //
+//                         O\  =  /O                              //
+//                      ____/`---'\____                           //
+//                    .'  \\|     |//  `.                         //
+//                   /  \\|||  :  |||//  \                        //
+//                  /  _||||| -:- |||||-  \                       //
+//                  |   | \\\  -  /// |   |                       //
+//                  | \_|  ''\---/''  |   |                       //
+//                  \  .-\__  `-`  ___/-. /                       //
+//                ___`. .'  /--.--\  `. . ___                     //
+//              ."" '<  `.___\_<|>_/___.'  >'"".                  //
+//            | | :  `- \`.;`\ _ /`;.`/ - ` : | |                 //
+//            \  \ `-.   \_ __\ /__ _/   .-` /  /                 //
+//      ========`-.____`-.___\_____/___.-`____.-'========         //
+//                           `=---='                              //
+//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        //
+//         佛祖保佑    永無BUG    永不修改     都搶得到場          //
+////////////////////////////////////////////////////////////////////
+-->
+<head>
+    <title>排球搶場網站</title>
+    <meta charset="utf-8">
+    <meta name = "description" content = "東華排球搶場資工專用">
+    <meta name = "author" content = "Wilson Chang">
+    <link rel="stylesheet" href="static/index.css">
+    
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</head>
+<body class = "center">
+    <div class="title" style = "font-size: 13vmin;font-family: 'Poppins', sans-serif;background-color: #8592a2;border-radius: 20px;color: #ffffff;"> 🏐 排球12點搶場</div>
+    <form method="POST">
+        <br>
+        <a class = "change"  href="{{  url_for('my_form2')  }}"> 點我去立即搶場網頁</a>
+        <br>
+        <br>
+        <div class="border">
+            <p class = "word2">搶場時段: {{time}} ~ {{time2}}</p>
+            <p class = "word2">搶場狀態: {{result}}</p>
+        </div>
+        
+        <p class = "use">使用說明</p>
+        <p class = "use2"><strong>Student ID & Password</strong><br>請輸入搶場要用的帳號密碼，網站不會儲存你的帳號密碼，請放心用(我也不會寫)
+        <br><strong>Date</strong><br>時間格式請輸入xxxx/xx/xx，若個位數請補0 ex:2022/05/02
+        <br><strong>Court</strong><br>請輸入A~F場，六期J，K場和R(R1)場的英文字母，大小寫不限。<br>假如我要搶排球場E就輸入e或E，目前只支援排球場
+        <br><strong>Time</strong><br>請輸入搶場時段，請輸入6~22的數字<br>假如要搶19~21的場次，請輸入19，以此類推
+        <br><strong>Speed</strong><br>請輸入搶場速度<br>2 => 兩秒搶到，3 => 三秒搶到
+        <br><br>搶場狀態顯示錯誤訊息表示可能輸入資料有誤導致
+        <br>顯示成功代表有搶到
+        </p>
+        <p class = "word3">請在<strong>11:59 40秒</strong>秒按下submit  ༼ つ ◕_◕ ༽つ 40</p>
+        <p class = "word" style="display:inline">Student ID&ensp;&ensp;</p>
+        <input class = bloc3 name="idd" style="text-align:center;"placeholder="帳號">
+        <br>
+        <br>
+        <br>
+        <p class = "word"style="display:inline">Password &ensp;&ensp;</p>
+        <input class = bloc3 name="pas" style="text-align:center;"placeholder="密碼">
+        <br>
+        <br>
+        <br>
+        <p class = "word"style="display:inline">Date &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</p>
+        <input class = bloc3 name="datee" style="text-align:center;" placeholder="xxxx/xx/xx">
+        <br>
+        <br>
+        <br>
+        <p class = "word"style="display:inline">Court&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</p>
+        <input class = bloc3 name="court" style="text-align:center;"placeholder="一個英文字母">
+        <br>
+        <br>
+        <br>
+        <p class = "word"style="display:inline">Time&ensp;  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</p>
+        <input class = bloc1 name="text2" style="text-align:center;"placeholder="場地時段">
+        <br>
+        <br>
+        <br>
+        <p class = "word"style="display:inline">Speed&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</p>
+        <input class = bloc1 name="speed" style="text-align:center;"placeholder="2或3">
+        <br>
+        <br>
+        <br>
+        <input class = bloc2 type="submit" value="Submit">
+        <p class = "word">稍等一下 ☜(ﾟヮﾟ☜)</p>
+    </form>
+
+    <a class = "use2" style = "text-decoration: none; color: rgb(62, 100, 145);"href="https://sys.ndhu.edu.tw/gc/sportcenter/SportsFields/login.aspx"> 點我去學校網站double check</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="https://github.com/wilsonchang17"><i class="fab fa-github fa-2x" style="color: rgb(0, 0, 0);"></a></i>
+    <br>
+    <br>
+    <div class = center >
+        <font style="font-size: 2vmin;color: #2a2d30;">Copyright © 2022 Wilson Chang, All Rights Reserved.</font>
+    </div>
+</body>
+</html>
